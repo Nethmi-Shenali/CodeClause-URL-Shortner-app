@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortener</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+    <!-- Add qrcode.js library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Link Shortener</h1>
+        <div class="form-group">
+            <label for="originalUrl">Enter your URL:</label>
+            <input type="text" class="form-control" id="originalUrl" placeholder="Enter your long URL">
+        </div>
+        <button class="btn btn-primary mt-3" onclick="shortenUrl()">Shorten</button>
+
+        <div id="result" class="mt-4">
+            <p class="mb-2">Your short URL:</p>
+            <a id="shortUrl" href="#" target="_blank"></a>
+            <p class="mt-2">You can refer to the link with the following generated QR code:</p>
+            <p id="qrCode"></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom script -->
+    <script src="script.js"></script>
+</body>
+</html>
